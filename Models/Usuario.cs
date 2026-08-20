@@ -21,7 +21,7 @@ public partial class Usuario
 
     public DateTime? AtualizadoEm { get; set; }
 
-    public virtual ICollection<LogsAuditorium> LogsAuditoria { get; set; } = new List<LogsAuditorium>();
+    public virtual ICollection<LogAuditoria> LogsAuditoria { get; set; } = new List<LogAuditoria>();
 
-    public virtual ICollection<Movimentaco> Movimentacos { get; set; } = new List<Movimentaco>();
+    public virtual ICollection<Movimentacao> Movimentacoes { get; set; } = new List<Movimentacao>();
 }

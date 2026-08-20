@@ -25,5 +25,5 @@ public partial class Parceiro
 
     public DateTime? AtualizadoEm { get; set; }
 
-    public virtual ICollection<Movimentaco> Movimentacos { get; set; } = new List<Movimentaco>();
+    public virtual ICollection<Movimentacao> Movimentacoes { get; set; } = new List<Movimentacao>();
 }

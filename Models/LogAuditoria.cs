@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ESTOQUE_CRECHE.Models;
 
-public partial class LogsAuditorium
+public partial class LogAuditoria
 {
     public int Id { get; set; }
 

@@ -15,13 +15,13 @@ public partial class AppDbContext : DbContext
     {
     }
 
-    public virtual DbSet<CategoriasIten> CategoriasItens { get; set; }
+    public virtual DbSet<CategoriaItem> CategoriasItens { get; set; }
 
-    public virtual DbSet<Iten> Itens { get; set; }
+    public virtual DbSet<Item> Itens { get; set; }
 
-    public virtual DbSet<LogsAuditorium> LogsAuditoria { get; set; }
+    public virtual DbSet<LogAuditoria> LogsAuditoria { get; set; }
 
-    public virtual DbSet<Movimentaco> Movimentacoes { get; set; }
+    public virtual DbSet<Movimentacao> Movimentacoes { get; set; }
 
     public virtual DbSet<Parceiro> Parceiros { get; set; }
 
@@ -29,7 +29,7 @@ public partial class AppDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<CategoriasIten>(entity =>
+        modelBuilder.Entity<CategoriaItem>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK__categori__3213E83F5CD68A7A");
 
@@ -53,7 +53,7 @@ public partial class AppDbContext : DbContext
                 .HasColumnName("nome");
         });
 
-        modelBuilder.Entity<Iten>(entity =>
+        modelBuilder.Entity<Item>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK__itens__3213E83F18814E45");
 
@@ -102,7 +102,7 @@ public partial class AppDbContext : DbContext
                 .HasConstraintName("FK_itens_categorias");
         });
 
-        modelBuilder.Entity<LogsAuditorium>(entity =>
+        modelBuilder.Entity<LogAuditoria>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK__logs_aud__3213E83FC5C6D53C");
 
@@ -134,7 +134,7 @@ public partial class AppDbContext : DbContext
                 .HasConstraintName("FK_logs_usuarios");
         });
 
-        modelBuilder.Entity<Movimentaco>(entity =>
+        modelBuilder.Entity<Movimentacao>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK__moviment__3213E83F97AF07F3");
 
@@ -185,16 +185,16 @@ public partial class AppDbContext : DbContext
                 .HasColumnType("decimal(10, 2)")
                 .HasColumnName("valor_unitario");
 
-            entity.HasOne(d => d.Item).WithMany(p => p.Movimentacos)
+            entity.HasOne(d => d.Item).WithMany(p => p.Movimentacoes)
                 .HasForeignKey(d => d.ItemId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_movimentacoes_itens");
 
-            entity.HasOne(d => d.Parceiro).WithMany(p => p.Movimentacos)
+            entity.HasOne(d => d.Parceiro).WithMany(p => p.Movimentacoes)
                 .HasForeignKey(d => d.ParceiroId)
                 .HasConstraintName("FK_movimentacoes_parceiros");
 
-            entity.HasOne(d => d.Responsavel).WithMany(p => p.Movimentacos)
+            entity.HasOne(d => d.Responsavel).WithMany(p => p.Movimentacoes)
                 .HasForeignKey(d => d.ResponsavelId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_movimentacoes_usuarios");
