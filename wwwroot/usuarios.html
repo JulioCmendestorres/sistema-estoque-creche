@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Estoque - Usuários</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Gestão de Usuários</h2>
+
+        <form id="formUsuario">
+            <h3>+ Novo Usuário</h3>
+            <input type="text" id="nome" placeholder="Nome do usuário" required>
+            <input type="email" id="email" placeholder="E-mail" required>
+            <input type="password" id="senha" placeholder="Senha" required>
+            <select id="papel" required>
+                <option value="">Selecione o papel</option>
+                <option value="admin">Administrador</option>
+                <option value="operacional">Operador</option>
+                <option value="visualizador">Apenas Visualização</option>
+            </select>
+            <button type="submit">Salvar</button>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Papel</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabela">
+                <tr><td colspan="5">Carregando dados...</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="/js/usuarios.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Estoque Básico</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Gestão de Categorias</h2>
+
+        <form id="formCategoria">
+            <h3>+ Nova Categoria</h3>
+            <input type="text" id="nome" placeholder="Nome da categoria" required>
+            <input type="text" id="descricao" placeholder="Descrição">
+            <button type="submit">Salvar</button>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Descrição</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabela">
+                <tr><td colspan="4">Carregando dados...</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="/js/categorias.js"></script>
+</body>
+</html>

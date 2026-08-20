@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Estoque - Itens</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Gestão de Itens</h2>
+
+        <form id="formItem">
+            <h3>+ Novo Item</h3>
+            <input type="text" id="nome" placeholder="Nome do item" required>
+            <input type="text" id="codigoInterno" placeholder="Código interno" required>
+            <input type="number" id="categoriaId" placeholder="ID da categoria" required>
+            <input type="number" id="quantidadeAtual" placeholder="Quantidade atual" required>
+            <input type="number" id="quantidadeMinima" placeholder="Quantidade mínima" value="0">
+            <input type="text" id="unidadeMedida" placeholder="Unidade de medida (ex: un, kg, cx)">
+            <input type="text" id="descricao" placeholder="Descrição">
+            <button type="submit">Salvar</button>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Código</th>
+                    <th>Qtd. Atual</th>
+                    <th>Qtd. Mínima</th>
+                    <th>Unidade</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabela">
+                <tr><td colspan="7">Carregando dados...</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="/js/itens.js"></script>
+</body>
+</html>

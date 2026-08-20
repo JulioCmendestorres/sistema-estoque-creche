@@ -20,6 +20,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseDefaultFiles(); // Procura automaticamente por um arquivo index.html
+app.UseStaticFiles();  // Permite que o servidor entregue arquivos HTML, CSS e JS
+
+app.UseAuthorization();
+app.MapControllers();
+app.Run();
+
 app.UseAuthorization();
 
 app.MapControllers();

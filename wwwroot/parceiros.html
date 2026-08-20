@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Estoque - Parceiros</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Gestão de Parceiros</h2>
+
+        <form id="formParceiro">
+            <h3>+ Novo Parceiro</h3>
+            <input type="text" id="nome" placeholder="Nome do parceiro" required>
+            <input type="text" id="cnpj" placeholder="CNPJ" required>
+            <select id="tipo" required>
+                <option value="">Selecione o tipo</option>
+                <option value="organizacao">Organização</option>
+                <option value="empresa">Empresa</option>
+                <option value="pessoa_fisica">Pessoa Física</option>
+            </select>
+            <input type="text" id="telefone" placeholder="Telefone">
+            <input type="email" id="email" placeholder="E-mail">
+            <input type="text" id="endereco" placeholder="Endereço">
+            <button type="submit">Salvar</button>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>CNPJ</th>
+                    <th>Tipo</th>
+                    <th>Telefone</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabela">
+                <tr><td colspan="6">Carregando dados...</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="/js/parceiros.js"></script>
+</body>
+</html>
