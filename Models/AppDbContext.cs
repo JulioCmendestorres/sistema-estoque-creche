@@ -206,7 +206,7 @@ public partial class AppDbContext : DbContext
 
             entity.ToTable("parceiros");
 
-            entity.HasIndex(e => e.CpfCnpj, "UQ__parceiro__F9F7EECF85E23B9A").IsUnique();
+            entity.HasIndex(e => e.Cnpj, "UQ__parceiro__F9F7EECF85E23B9A").IsUnique();
 
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Ativo)
@@ -215,10 +215,10 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.AtualizadoEm)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnName("atualizado_em");
-            entity.Property(e => e.CpfCnpj)
+            entity.Property(e => e.Cnpj)
                 .HasMaxLength(20)
                 .IsUnicode(false)
-                .HasColumnName("cpf_cnpj");
+                .HasColumnName("cnpj");
             entity.Property(e => e.CriadoEm)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnName("criado_em");

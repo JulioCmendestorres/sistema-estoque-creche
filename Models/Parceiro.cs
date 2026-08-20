@@ -11,7 +11,7 @@ public partial class Parceiro
 
     public string? Tipo { get; set; }
 
-    public string? CpfCnpj { get; set; }
+    public string? Cnpj { get; set; }
 
     public string? Email { get; set; }
 
