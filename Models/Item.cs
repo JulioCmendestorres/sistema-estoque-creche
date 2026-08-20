@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ESTOQUE_CRECHE.Models;
 
-public partial class Iten
+public partial class Item
 {
     public int Id { get; set; }
 
@@ -29,7 +29,7 @@ public partial class Iten
 
     public DateTime? AtualizadoEm { get; set; }
 
-    public virtual CategoriasIten Categoria { get; set; } = null!;
+    public virtual CategoriaItem Categoria { get; set; } = null!;
 
-    public virtual ICollection<Movimentaco> Movimentacos { get; set; } = new List<Movimentaco>();
+    public virtual ICollection<Movimentacao> Movimentacoes { get; set; } = new List<Movimentacao>();
 }
