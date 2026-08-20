@@ -19,7 +19,7 @@ public partial class Movimentacao
 
     public decimal? ValorTotal { get; set; }
 
-    public DateOnly DataMovimentacao { get; set; }
+    public DateTime? DataMovimentacao { get; set; }
 
     public int? ParceiroId { get; set; }
 
