@@ -1,0 +1,6 @@
+@ESTOQUE_CRECHE_HostAddress = http://localhost:5005
+
+GET {{ESTOQUE_CRECHE_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
