@@ -29,7 +29,7 @@ public partial class Item
 
     public DateTime? AtualizadoEm { get; set; }
 
-    public virtual CategoriaItem Categoria { get; set; } = null!;
+    public virtual CategoriaItem? Categoria { get; set; } = null!;
 
     public virtual ICollection<Movimentacao> Movimentacoes { get; set; } = new List<Movimentacao>();
 }

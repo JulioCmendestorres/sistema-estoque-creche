@@ -37,9 +37,9 @@ public partial class Movimentacao
 
     public DateTime? AtualizadoEm { get; set; }
 
-    public virtual Item Item { get; set; } = null!;
+    public virtual Item? Item { get; set; } = null!;
 
     public virtual Parceiro? Parceiro { get; set; }
 
-    public virtual Usuario Responsavel { get; set; } = null!;
+    public virtual Usuario? Responsavel { get; set; } = null!;
 }
